@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fisio Sense — Mova. Jogue. Evolua.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=Michroma&family=Sora:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Símbolo do axolote (desenho original, inspirado na logo) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    
+    <linearGradient id="ag" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#008CFF" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#008CFF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+</svg>
+
+<!-- Intro -->
+<div id="intro" aria-hidden="true">
+  <canvas id="introCv"></canvas>
+  <svg class="intro-hex" viewBox="0 0 600 600"><polygon points="300,40 525,170 525,430 300,560 75,430 75,170"/><polygon class="h2" points="300,110 465,205 465,395 300,490 135,395 135,205"/></svg>
+  <div class="st-fiap">
+    <img src="assets/fiap.png" alt="" onerror="this.remove()" onload="this.parentNode.classList.add('has-logo')">
+    <div class="fiap-txt"><span>NEXT</span><b>FIAP</b></div>
+    <div class="fiap-sub">APRESENTA</div>
+  </div>
+  <div class="st-fs">
+    <img class="axo-img " src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-axo alt="Axolote oficial Fisio Sense">
+    <div class="t1">FISIO SENSE</div>
+    <div class="t2">MOVA. JOGUE. EVOLUA.</div>
+  </div>
+  <button class="skip" id="skipIntro">PULAR</button>
+</div>
+
+<canvas id="bgcanvas" aria-hidden="true"></canvas>
+
+
+<nav id="nav">
+  <div class="nav-in">
+    <a class="brand" href="#hero" aria-label="Fisio Sense, início">
+      <img class="axo-img " src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-axo alt="Axolote oficial Fisio Sense">
+      FISIO<b>SENSE</b>
+    </a>
+    <div class="links" id="links">
+      <a href="#problema">PROJETO</a>
+      <a href="#tecnologia">TECNOLOGIA</a>
+      <a href="#game">GAME</a>
+      <a href="#evolucao">EVOLUÇÃO</a>
+      <a href="#mascote">SOBRE</a>
+    </div>
+    <a class="btn sm" href="#solucao">EXPLORAR →</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false"><i></i><i></i><i></i></button>
+  </div>
+</nav>
+
+<main>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="diag" style="width:70vw;top:18%;left:-10%;transform:rotate(-24deg)"></div>
+  <div class="diag" style="width:50vw;bottom:10%;right:-14%;transform:rotate(-24deg)"></div>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <div class="tag">FISIO SENSE // MOTION TECHNOLOGY</div>
+      <h1><span>MOVA.</span><span>JOGUE.</span><span class="ev">EVOLUA.</span></h1>
+      <p class="lead">Transformando movimento em interação através de tecnologia, fisioterapia e gamificação.</p>
+      <div class="ctas">
+        <a class="btn solid" href="#problema">CONHEÇA O PROJETO</a>
+        <a class="btn" href="#solucao">COMO FUNCIONA ↓</a>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 600 600">
+        <g class="spin"><polygon points="300,20 542,160 542,440 300,580 58,440 58,160" fill="none" stroke="#003B7A" stroke-width="1.5"/></g>
+        <polygon points="300,70 499,185 499,415 300,530 101,415 101,185" fill="rgba(0,59,122,.06)" stroke="#007BFF" stroke-width="2" stroke-dasharray="300 90 60 120"/>
+        <g class="spin r"><circle cx="300" cy="300" r="210" fill="none" stroke="#008CFF" stroke-width="1" stroke-dasharray="2 10" opacity=".7"/></g>
+        <circle cx="300" cy="300" r="160" fill="none" stroke="#003B7A" stroke-width="1"/>
+        <circle cx="300" cy="300" r="250" fill="none" stroke="#003B7A" stroke-width="1" stroke-dasharray="40 30" opacity=".6"/>
+        <path d="M60 300 H140 M460 300 H540 M300 40 V100 M300 500 V560" stroke="#008CFF" stroke-width="1.5"/>
+        <path d="M120 120 h24 v24 M480 480 h-24 v-24" fill="none" stroke="#00A8FF" stroke-width="2"/>
+        <rect x="520" y="90" width="8" height="8" fill="#008CFF"/><rect x="536" y="90" width="8" height="8" fill="#008CFF" opacity=".5"/>
+        <rect x="70" y="500" width="14" height="14" fill="none" stroke="#008CFF" transform="rotate(45 77 507)"/>
+        <rect x="96" y="500" width="14" height="14" fill="none" stroke="#008CFF" transform="rotate(45 103 507)"/>
+        <polygon points="500,60 512,68 500,76" fill="#008CFF"/><polygon points="520,60 532,68 520,76" fill="#008CFF"/>
+        <path d="M150 380 L210 350 L260 395 L330 330 L400 360" fill="none" stroke="#00A8FF" stroke-width="1" stroke-dasharray="3 5" opacity=".8"/>
+        <g fill="#00A8FF"><circle cx="210" cy="350" r="3"/><circle cx="260" cy="395" r="3"/><circle cx="330" cy="330" r="3"/></g>
+      </svg>
+      <div class="swimwrap"><div class="halo"></div><div class="swim"><img class="axo-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-axo alt="Axolote oficial Fisio Sense"></div></div>
+    </div>
+  </div>
+  <div class="scroll-cue hud"><i></i>SCROLL</div>
+</section>
+
+<!-- FRASE -->
+<section id="frase">
+  <svg class="hex-deco" style="right:-180px;top:40px;width:560px;opacity:.5" viewBox="0 0 200 200"><polygon points="100,4 186,52 186,148 100,196 14,148 14,52" stroke-width=".6" stroke-dasharray="120 60"/></svg>
+  <div class="wrap reveal">
+    <h2>SEU MOVIMENTO<br>TEM UM NOVO<br><span class="blue glow">SENTIDO.</span></h2>
+    <p class="lead">Fisio Sense transforma movimento em interação, interação em dados e dados em evolução.</p>
+  </div>
+</section>
+
+<!-- PROBLEMA -->
+<section id="problema">
+  <div class="wrap">
+    <div class="prob-head reveal">
+      <div><div class="tag">O DESAFIO</div><h2 style="margin-top:22px">A fisioterapia<br>pode <span class="blue">evoluir.</span></h2></div>
+      <p class="lead">Exercícios repetitivos, dificuldade de acompanhamento e falta de interação podem tornar o processo menos envolvente.</p>
+    </div>
+    <div class="hexes">
+      <div class="hexcard reveal">
+        <svg class="hb" viewBox="0 0 200 216" preserveAspectRatio="none"><polygon points="100,2 198,56 198,160 100,214 2,160 2,56"/><polygon class="in" points="100,14 186,62 186,154 100,202 14,154 14,62"/></svg>
+        <span class="n">01</span><h3>MOVIMENTO</h3><p>O corpo é o ponto de partida de cada sessão.</p>
+      </div>
+      <div class="hexcard reveal" style="transition-delay:.15s">
+        <svg class="hb" viewBox="0 0 200 216" preserveAspectRatio="none"><polygon points="100,2 198,56 198,160 100,214 2,160 2,56"/><polygon class="in" points="100,14 186,62 186,154 100,202 14,154 14,62"/></svg>
+        <span class="n">02</span><h3>INTERAÇÃO</h3><p>Cada exercício responde ao que você faz.</p>
+      </div>
+      <div class="hexcard reveal" style="transition-delay:.3s">
+        <svg class="hb" viewBox="0 0 200 216" preserveAspectRatio="none"><polygon points="100,2 198,56 198,160 100,214 2,160 2,56"/><polygon class="in" points="100,14 186,62 186,154 100,202 14,154 14,62"/></svg>
+        <span class="n">03</span><h3>EVOLUÇÃO</h3><p>O progresso fica visível, sessão após sessão.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUÇÃO -->
+<section id="solucao">
+  <div class="wrap">
+    <div class="reveal" style="max-width:820px">
+      <div class="tag">A SOLUÇÃO</div>
+      <h2 style="margin-top:22px">TECNOLOGIA QUE<br><span class="blue">ENTENDE</span> MOVIMENTO.</h2>
+    </div>
+    <div class="flow reveal">
+      <div class="flow-line"><div class="fill"></div><i class="dot"></i><i class="dot"></i><i class="dot"></i></div>
+      <div class="node"><div class="hx"><svg viewBox="0 0 90 90"><polygon points="45,3 84,25 84,65 45,87 6,65 6,25"/></svg><span>01</span></div><div><h4>MOVIMENTO</h4><p>Você se move na frente da câmera.</p></div></div>
+      <div class="node"><div class="hx"><svg viewBox="0 0 90 90"><polygon points="45,3 84,25 84,65 45,87 6,65 6,25"/></svg><span>02</span></div><div><h4>CAPTURA</h4><p>O sistema reconhece o corpo e as articulações.</p></div></div>
+      <div class="node"><div class="hx"><svg viewBox="0 0 90 90"><polygon points="45,3 84,25 84,65 45,87 6,65 6,25"/></svg><span>03</span></div><div><h4>INTERAÇÃO</h4><p>O gesto vira comando dentro do jogo.</p></div></div>
+      <div class="node"><div class="hx"><svg viewBox="0 0 90 90"><polygon points="45,3 84,25 84,65 45,87 6,65 6,25"/></svg><span>04</span></div><div><h4>DADOS</h4><p>Ângulos, tempo e precisão são registrados.</p></div></div>
+      <div class="node"><div class="hx"><svg viewBox="0 0 90 90"><polygon points="45,3 84,25 84,65 45,87 6,65 6,25"/></svg><span>05</span></div><div><h4>EVOLUÇÃO</h4><p>O progresso guia os próximos desafios.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- MOTION TRACKING -->
+<section id="tecnologia">
+  <div class="wrap track-grid">
+    <div class="reveal">
+      <div class="tag">MOTION TRACKING</div>
+      <h2 style="margin-top:22px">O CORPO<br>VIRA <span class="blue">DADO.</span></h2>
+      <p class="lead" style="margin-top:28px">Com uma câmera comum, o Fisio Sense identifica as principais articulações e acompanha cada movimento em tempo real: amplitude, ângulo e tempo de reação.</p>
+      <div class="chips"><span class="chip">CÂMERA</span><span class="chip">VISÃO COMPUTACIONAL</span><span class="chip">TEMPO REAL</span></div>
+    </div>
+    <div class="panel scanbox reveal" aria-label="Simulação de reconhecimento de movimento">
+      <div class="grid-bg"></div>
+      <i class="corner c1"></i><i class="corner c2"></i><i class="corner c3"></i><i class="corner c4"></i>
+      <div class="hud tl">MOTION TRACKING<b class="blue" style="font-size:14px">BODY DETECTED</b></div>
+      <div class="hud tr">STATUS<b class="blue blink" style="font-size:14px">ACTIVE</b></div>
+      <svg class="body" viewBox="0 0 240 420" aria-hidden="true">
+        <g class="sil2">
+          <circle cx="120" cy="34" r="25"/>
+          <line x1="120" y1="56" x2="120" y2="86" stroke-width="20"/>
+          <polygon points="72,82 168,82 154,214 86,214" stroke-width="10"/>
+          <line x1="80" y1="88" x2="54" y2="150"/><line x1="54" y1="150" x2="36" y2="196" stroke-width="18"/>
+          <line x1="160" y1="88" x2="190" y2="140"/><line x1="190" y1="140" x2="214" y2="96" stroke-width="18"/>
+          <line x1="96" y1="206" x2="90" y2="300" stroke-width="30"/><line x1="90" y1="300" x2="84" y2="396" stroke-width="24"/>
+          <line x1="144" y1="206" x2="150" y2="300" stroke-width="30"/><line x1="150" y1="300" x2="156" y2="396" stroke-width="24"/>
+        </g>
+        <g class="bone">
+          <line x1="120" y1="46" x2="120" y2="84"/>
+          <line x1="80" y1="88" x2="160" y2="88"/>
+          <line x1="80" y1="88" x2="54" y2="150"/><line x1="54" y1="150" x2="36" y2="196"/>
+          <line x1="160" y1="88" x2="190" y2="140"/><line x1="190" y1="140" x2="214" y2="96"/>
+          <line x1="120" y1="84" x2="120" y2="200"/>
+          <line x1="96" y1="206" x2="144" y2="206"/>
+          <line x1="96" y1="206" x2="90" y2="300"/><line x1="90" y1="300" x2="84" y2="396"/>
+          <line x1="144" y1="206" x2="150" y2="300"/><line x1="150" y1="300" x2="156" y2="396"/>
+        </g>
+        <path d="M172 104 A24 24 0 0 1 182 120" fill="none" stroke="#00A8FF" stroke-width="1.5"/>
+        <g>
+          <circle class="jt" cx="120" cy="34" r="8"/>
+          <circle class="jt" cx="80" cy="88" r="6"/><circle class="jt" cx="160" cy="88" r="6"/>
+          <circle class="jt" cx="54" cy="150" r="6"/><circle class="jt" cx="190" cy="140" r="6"/><circle class="pulse" cx="190" cy="140" r="6"/>
+          <circle class="jt" cx="36" cy="196" r="5"/><circle class="jt" cx="214" cy="96" r="5"/><circle class="pulse" cx="214" cy="96" r="5" style="animation-delay:1s"/>
+          <circle class="jt" cx="96" cy="206" r="6"/><circle class="jt" cx="144" cy="206" r="6"/>
+          <circle class="jt" cx="90" cy="300" r="6"/><circle class="jt" cx="150" cy="300" r="6"/>
+          <circle class="jt" cx="84" cy="396" r="5"/><circle class="jt" cx="156" cy="396" r="5"/>
+        </g>
+      </svg>
+      <div class="scanline"></div>
+      <div class="readouts">
+        <div class="hud">SHOULDER<b>87°</b></div>
+        <div class="hud">ELBOW<b>112°</b></div>
+        <div class="hud">REACTION<b>0.42s</b></div>
+        <div class="hud">STATUS<b class="blue">ACTIVE</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GAME -->
+<section id="publico">
+  <div class="wrap">
+    <div class="pub-head reveal">
+      <div><div class="tag">PARA QUEM É</div><h2 style="margin-top:22px">FEITO PARA<br>QUEM SE <span class="blue">MOVE.</span></h2></div>
+      <p class="lead">Basta um computador com câmera. Sem sensores presos no corpo, sem equipamento caro: a pessoa fica na frente da tela e o próprio corpo vira o controle.</p>
+    </div>
+    <div class="pub-grid">
+      <div class="panel pub reveal"><h3>Pacientes</h3><p>Quem precisa repetir exercícios na reabilitação e quer que a sessão seja menos cansativa e mais motivadora.</p></div>
+      <div class="panel pub reveal"><h3>Fisioterapeutas</h3><p>Uma ferramenta de apoio para acompanhar reação, amplitude e evolução, sem substituir o olhar do profissional.</p></div>
+      <div class="panel pub reveal"><h3>Clínicas e escolas</h3><p>Um jeito acessível de levar movimento e tecnologia para mais pessoas, usando equipamentos que já existem.</p></div>
+    </div>
+    <div class="ficha panel reveal">
+      <div class="hud">PROJETO<b>FisioSense</b></div>
+      <div class="hud">ORIGEM<b>Next · FIAP</b></div>
+      <div class="hud">JOGOS<b class="blue">2</b></div>
+      <div class="hud">CONTROLE<b>Câmera</b></div>
+      <div class="hud">MASCOTE<b>Alexsolot</b></div>
+    </div>
+  </div>
+</section>
+
+<section id="game">
+  <div class="wrap">
+    <div class="game-head reveal">
+      <h2>MOVA.<br>JOGUE.<br><span class="blue glow">EVOLUA.</span></h2>
+      <p class="lead">Quando o movimento vira interação, cada exercício pode se transformar em um desafio. Estes são os jogos que criamos.</p>
+    </div>
+    <div class="gtabs reveal" role="tablist">
+      <button class="gtab on" role="tab" aria-selected="true" data-g="fbf"><small>JOGO 01</small>FBF · FISIOBOXFIGHT</button>
+      <button class="gtab" role="tab" aria-selected="false" data-g="canoa"><small>JOGO 02</small>CANOEINGSENSE</button>
+    </div>
+    <div class="gviews reveal">
+      <div class="gview on" id="g-fbf">
+        <div class="panel screen">
+          <video class="gvid" src="assets/fbf.mp4" autoplay muted loop playsinline onerror="this.remove()" onloadeddata="this.classList.add('ok')"></video>
+          <canvas class="gc" id="cFbf" aria-label="Trecho do jogo FBF: treinador de boxe 3D com alvos de soco"></canvas>
+          <div class="ghud">
+            <div class="hud">SCORE<b id="fScore">1240</b></div>
+            <div class="hud">COMBO<b class="blue" id="fCombo">x08</b></div>
+            <div class="hud">ROUND<b>04</b></div>
+            <div class="hud" style="text-align:right">REAÇÃO<b class="blue" id="fRea">0.42s</b></div>
+          </div>
+          <div class="gcall" id="fCall">JAB ESQUERDO</div>
+          <div class="camwin"><canvas id="cCam"></canvas><span>CÂMERA</span></div>
+          <div class="gcredit">by FisioSense From Next-FIAP</div>
+        </div>
+        <div class="gmeta">
+          <div><h3>FBF · FisioBoxFight</h3><p>Boxe 3D com um treinador virtual. A câmera reconhece seus socos e a defesa alta, e o treinador puxa o ritmo do treino de reflexo.</p><ul class="feat"><li>Treinador boxeador em 3D que chama os golpes</li><li>Jab, direto, gancho e defesa alta reconhecidos pela câmera</li><li>Luva esquerda vermelha e direita azul em tudo: boneco, indicadores e câmera</li><li>Mede o tempo de reação a cada golpe</li><li>Tem segredos escondidos para quem souber o código</li></ul></div>
+          <div class="chips"><span class="chip">BOXE 3D</span><span class="chip">REFLEXO</span><span class="chip">CÂMERA</span></div>
+        </div>
+      </div>
+      <div class="gview" id="g-canoa">
+        <div class="panel screen">
+          <video class="gvid" src="assets/canoa.mp4" autoplay muted loop playsinline onerror="this.remove()" onloadeddata="this.classList.add('ok')"></video>
+          <canvas class="gc" id="cCanoa" aria-label="Trecho do jogo CanoeingSense: canoa descendo o rio entre boias"></canvas>
+          <div class="ghud">
+            <div class="hud">DISTÂNCIA<b id="cDist">0420m</b></div>
+            <div class="hud">VELOCIDADE<b class="blue" id="cVel">12 km/h</b></div>
+            <div class="hud">PORTAS<b id="cGate">07/12</b></div>
+            <div class="hud" style="text-align:right">RITMO<b class="blue">PERFECT</b></div>
+          </div>
+          <div class="gcall" id="cCall">REME À DIREITA</div>
+          <div class="gcredit">by FisioSense From Next-FIAP</div>
+        </div>
+        <div class="gmeta">
+          <div><h3>CanoeingSense</h3><p>Canoagem 3D controlada pelo corpo. Cada remada feita na frente da câmera move a canoa, e o desafio é passar pelas portas do percurso.</p><ul class="feat"><li>Remada pela esquerda ou pela direita muda a direção da canoa</li><li>Trabalha coordenação, tronco e ritmo</li><li>Percurso com portas para atravessar</li><li>Feito pela mesma equipe do FBF, com visual próprio</li></ul></div>
+          <div class="chips"><span class="chip">CANOAGEM 3D</span><span class="chip">COORDENAÇÃO</span><span class="chip">CÂMERA</span></div>
+        </div>
+      </div>
+    </div>
+    <p class="muted" style="font-size:12px;margin-top:14px">Recriação animada dos jogos. Para mostrar o gameplay real, adicione assets/fbf.mp4 e assets/canoa.mp4.</p>
+  </div>
+</section>
+
+<!-- EVOLUÇÃO -->
+<section id="evolucao">
+  <div class="wrap">
+    <div class="reveal" style="margin-bottom:60px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px;align-items:end">
+      <div><div class="tag">O QUE A CIÊNCIA JÁ MOSTRA</div><h2 style="margin-top:22px">CADA MOVIMENTO<br><span class="blue">CONTA.</span></h2></div>
+      <p class="lead">O Fisio Sense ainda está em testes, mas a ideia de transformar exercício em jogo já foi estudada. Estes são resultados reais de revisões e meta-análises publicadas.</p>
+    </div>
+    <div class="panel dash ev reveal">
+      <div class="dash-top">
+        <div class="hud">EVIDENCE LOG<b style="font-size:15px">REVISÕES SISTEMÁTICAS</b></div>
+        <div class="hud" style="text-align:right">BASE<b style="font-size:15px">ENSAIOS CLÍNICOS RANDOMIZADOS</b></div>
+      </div>
+      <div class="ev-main">
+        <div class="ev-block">
+          <div class="k">O PROBLEMA</div>
+          <div class="ev-big"><span class="v" data-to="70">0</span><small>%</small></div>
+          <p>é até quanto pode chegar a não adesão aos exercícios de fisioterapia feitos em casa.</p>
+          <div class="ev-bar"><i data-w="70%"></i></div>
+        </div>
+        <div class="ev-block">
+          <div class="k">INTERVENÇÕES DIGITAIS NA ADESÃO</div>
+          <div class="tris"><svg class="tri win" viewBox="0 0 60 66"><polygon points="30,2 58,18 58,48 30,64 2,48 2,18"/></svg><svg class="tri win" viewBox="0 0 60 66"><polygon points="30,2 58,18 58,48 30,64 2,48 2,18"/></svg><svg class="tri win" viewBox="0 0 60 66"><polygon points="30,2 58,18 58,48 30,64 2,48 2,18"/></svg><svg class="tri win" viewBox="0 0 60 66"><polygon points="30,2 58,18 58,48 30,64 2,48 2,18"/></svg><svg class="tri win" viewBox="0 0 60 66"><polygon points="30,2 58,18 58,48 30,64 2,48 2,18"/></svg><svg class="tri win" viewBox="0 0 60 66"><polygon points="30,2 58,18 58,48 30,64 2,48 2,18"/></svg><svg class="tri win" viewBox="0 0 60 66"><polygon points="30,2 58,18 58,48 30,64 2,48 2,18"/></svg><svg class="tri" viewBox="0 0 60 66"><polygon points="30,2 58,18 58,48 30,64 2,48 2,18"/></svg><svg class="tri" viewBox="0 0 60 66"><polygon points="30,2 58,18 58,48 30,64 2,48 2,18"/></svg><svg class="tri" viewBox="0 0 60 66"><polygon points="30,2 58,18 58,48 30,64 2,48 2,18"/></svg></div>
+          <p><b class="blue">7 de 10</b> ensaios clínicos (1.117 participantes) mostraram mais adesão aos exercícios em casa quando havia um apoio digital.</p>
+        </div>
+      </div>
+      <div class="stats">
+        <div class="stat"><div class="k">EQUILÍBRIO · ESCALA DE BERG</div><div class="v">+2,15 <small>pts</small></div><p>com exergames em idosos, em 12 ensaios clínicos</p></div>
+        <div class="stat"><div class="k">MOBILIDADE · TIMED UP AND GO</div><div class="v">−2,48 <small>s</small></div><p>menos tempo para levantar, andar e sentar</p></div>
+        <div class="stat"><div class="k">RESISTÊNCIA · CAMINHADA DE 6 MIN</div><div class="v">+25,5 <small>m</small></div><p>em pessoas com esclerose múltipla, contra nenhuma intervenção</p></div>
+      </div>
+    </div>
+    <div class="sources reveal">
+      <p>Fontes:
+      <a href="https://pubmed.ncbi.nlm.nih.gov/32682439/" target="_blank" rel="noopener">Pacheco et al., Systematic Reviews, 2020</a> ·
+      <a href="https://doaj.org/article/7bec7dd8bfab47dbbe1704e8a198d74b" target="_blank" rel="noopener">Elhusein et al., Belitung Nursing Journal, 2024</a> ·
+      <a href="https://scholars.duke.edu/publication/1563256" target="_blank" rel="noopener">Musculoskeletal Science and Practice, 2023</a> ·
+      Lang et al., Archives of Physiotherapy, 2022</p>
+      <p>São resultados de estudos com exergames e apoio digital em geral, não do Fisio Sense. Os dados do nosso protótipo entram aqui depois dos testes.</p>
+    </div>
+  </div>
+</section>
+
+<!-- MASCOTE -->
+<section id="mascote">
+  <div class="wrap why">
+    <div class="why-art reveal">
+      <svg viewBox="0 0 600 600" aria-hidden="true">
+        <polygon points="300,20 542,160 542,440 300,580 58,440 58,160" fill="none" stroke="#003B7A" stroke-width="1.5"/>
+        <polygon points="300,70 499,185 499,415 300,530 101,415 101,185" fill="none" stroke="#007BFF" stroke-width="1.5" stroke-dasharray="220 100"/>
+        <g class="spin r"><circle cx="300" cy="300" r="250" fill="none" stroke="#008CFF" stroke-dasharray="1 9" opacity=".6"/></g>
+        <circle cx="300" cy="300" r="180" fill="none" stroke="#003B7A"/>
+        <path d="M0 300 H90 M510 300 H600" stroke="#008CFF"/>
+        <path d="M70 70 h30 v30 M530 530 h-30 v-30" fill="none" stroke="#00A8FF" stroke-width="2"/>
+        <rect x="470" y="70" width="9" height="9" fill="#008CFF"/><rect x="486" y="70" width="9" height="9" fill="#008CFF" opacity=".5"/>
+        <text x="66" y="560" fill="#008CFF" font-family="Chakra Petch" font-size="12" letter-spacing="3">X 042.18 / Y 117.06</text>
+        <text x="380" y="52" fill="#008CFF" font-family="Chakra Petch" font-size="12" letter-spacing="3">MASCOTE OFICIAL</text>
+      </svg>
+      <div class="swimwrap"><div class="halo"></div><div class="swim" style="animation-delay:-3s"><img class="axo-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-axo alt="Axolote oficial Fisio Sense"></div></div>
+    </div>
+    <div>
+      <div class="tag reveal">O MASCOTE</div>
+      <h2 class="reveal">POR QUE UM <span class="blue">AXOLOTE?</span></h2>
+      <p class="lead reveal">O Fisio Sense escolheu o axolote por uma característica que representa muito do que queremos transmitir: sua extraordinária capacidade de regeneração.</p>
+      <p class="lead reveal" style="color:var(--g)">Axolotes possuem uma capacidade de regeneração impressionante. Eles conseguem regenerar estruturas como membros e reparar alguns tecidos e órgãos, algo que desperta grande interesse científico.</p>
+      <p class="lead reveal" style="color:var(--g)">Para o Fisio Sense, essa característica representa uma ideia simples: evolução não significa apenas chegar mais longe. Significa também recuperar, adaptar e continuar.</p>
+      <div class="concepts reveal">
+        <div class="concept"><h3>REGENERAÇÃO.</h3><p>Capacidade extraordinária de regenerar determinadas estruturas.</p></div>
+        <div class="concept"><h3>ADAPTAÇÃO.</h3><p>Um animal que representa recuperação e transformação.</p></div>
+        <div class="concept"><h3>EVOLUÇÃO.</h3><p>Uma metáfora visual para continuar avançando.</p></div>
+      </div>
+      <p class="alex-hint reveal">O nome dele é Alexsolot. Clique ou toque nele quando ele passar nadando pelo site.</p>
+      <p class="why-close reveal">Assim como o axolote é associado à regeneração, o Fisio Sense busca representar uma fisioterapia voltada para movimento, evolução e novas possibilidades.</p>
+    </div>
+  </div>
+</section>
+
+<section id="pet">
+  <div class="wrap">
+    <div class="pet-head reveal">
+      <div><div class="tag">PET DIGITAL</div><h2 style="margin-top:22px">O ALEXSOLOT<br>VAI <span class="blue">JUNTO.</span></h2></div>
+      <p class="lead">Ele não fica só no site. A ideia é que o Alexsolot esteja dentro dos jogos, acompanhando cada sessão: explicando, corrigindo, comemorando e mostrando a evolução de quem joga.</p>
+    </div>
+    <div class="pet-grid">
+      <div class="panel pet-screen reveal" aria-label="Exemplo do Alexsolot dentro de um jogo">
+        <div class="ps-top hud"><span id="psGame">FBF · ROUND 02</span><span class="blue">AO VIVO</span></div>
+        <div class="ps-stage">
+          <svg viewBox="0 0 200 220" class="ps-body" aria-hidden="true">
+            <g stroke="#008CFF" stroke-width="3" stroke-linecap="round" fill="none"><line x1="100" y1="46" x2="100" y2="120"/><line x1="70" y1="62" x2="130" y2="62"/><line x1="70" y1="62" x2="78" y2="36"/><line x1="130" y1="62" x2="122" y2="36"/><line x1="100" y1="120" x2="82" y2="200"/><line x1="100" y1="120" x2="118" y2="200"/></g>
+            <circle cx="100" cy="26" r="13" fill="#000" stroke="#00A8FF" stroke-width="2.5"/>
+            <circle cx="78" cy="34" r="7" fill="#FF3B3B"/><circle cx="122" cy="34" r="7" fill="#008CFF"/>
+          </svg>
+          <div class="ps-check" id="psCheck">DEFESA ALTA ✓</div>
+        </div>
+        <div class="ps-pet">
+          <img src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-axo alt="Alexsolot">
+          <div class="ps-bub"><small>ALEXSOLOT</small><span id="psMsg">boa! mãos no rosto, defesa alta perfeita</span></div>
+        </div>
+      </div>
+      <div class="pet-roles">
+        <div class="role reveal"><h3>Assistente</h3><p>Explica cada exercício antes de começar e mostra o movimento certo. Ninguém fica perdido na primeira vez.</p></div>
+        <div class="role reveal"><h3>Feedback na hora</h3><p>Com a câmera, ele percebe o que pode melhorar e avisa durante o jogo: "levanta mais o braço", "rema pelo outro lado".</p></div>
+        <div class="role reveal"><h3>Motivação</h3><p>Comemora acertos, incentiva quando a pessoa erra e transforma uma série repetitiva em algo que dá vontade de continuar.</p></div>
+        <div class="role reveal"><h3>Acompanhamento</h3><p>No fim da sessão, mostra o que melhorou: reação, precisão, amplitude. A evolução fica fácil de entender.</p></div>
+        <div class="role reveal"><h3>A cara do projeto</h3><p>Carismático e fácil de lembrar, ele conecta site, jogos e redes sociais. Quem vê o Alexsolot, lembra do FisioSense.</p></div>
+      </div>
+    </div>
+    <p class="muted reveal" style="font-size:12px;margin-top:16px">Exemplo ilustrativo. O Alexsolot nos jogos está nos próximos passos do projeto.</p>
+  </div>
+</section>
+
+<!-- PROTÓTIPO -->
+<section id="prototipo">
+  <div class="wrap">
+    <div class="reveal" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px;align-items:end">
+      <div><div class="tag">PROTÓTIPO</div><h2 style="margin-top:22px">DO DIGITAL<br>PARA O <span class="blue">REAL.</span></h2></div>
+      <div>
+        <p class="lead">Software, jogos e reconhecimento de movimento testados fora da tela, com um protótipo físico em desenvolvimento.</p>
+        <div class="chips"><span class="chip">SOFTWARE</span><span class="chip">JOGOS</span><span class="chip">RECONHECIMENTO DE MOVIMENTO</span><span class="chip">PROTÓTIPO</span><span class="chip">TESTES</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section id="equipe">
+  <div class="wrap">
+    <div class="reveal" style="margin-bottom:56px"><div class="tag">QUEM FAZ</div><h2 style="margin-top:22px">A <span class="blue">EQUIPE.</span></h2></div>
+    <div class="team">
+      <div class="panel mem reveal"><span class="ini">L</span><h3>Lucas</h3><div class="role-t">Programação</div><p>Escreve o código dos jogos e do site, incluindo o próprio Alexsolot.</p></div>
+      <div class="panel mem reveal"><span class="ini">F</span><h3>Felipe</h3><div class="role-t">Design e CanoeingSense</div><p>Criou o visual do Alexsolot e trabalhou principalmente no jogo de canoagem.</p></div>
+      <div class="panel mem reveal"><span class="ini">K</span><h3>Kauan</h3><div class="role-t">Ideias e conceito</div><p>Contribuiu com ideias para os jogos e para a experiência do projeto.</p></div>
+    </div>
+    <p class="muted reveal" style="margin-top:22px;font-size:13px;letter-spacing:.15em;font-family:var(--fh)">by FisioSense From Next-FIAP</p>
+  </div>
+</section>
+
+<section id="timeline">
+  <div class="wrap">
+    <div class="reveal"><div class="tag">JORNADA</div><h2 style="margin-top:22px">LINHA DO <span class="blue">TEMPO.</span></h2></div>
+    <div class="tl-wrap reveal">
+      <div class="tl-track"><i></i></div>
+      <div class="tl">
+        <div class="step on"><div class="mk"><svg viewBox="0 0 60 60"><polygon points="30,2 56,16 56,44 30,58 4,44 4,16"/></svg><span>01</span></div><h4>IDEIA</h4><p>Unir fisioterapia e jogos.</p></div>
+        <div class="step on"><div class="mk"><svg viewBox="0 0 60 60"><polygon points="30,2 56,16 56,44 30,58 4,44 4,16"/></svg><span>02</span></div><h4>PESQUISA</h4><p>Entender exercícios e necessidades.</p></div>
+        <div class="step on"><div class="mk"><svg viewBox="0 0 60 60"><polygon points="30,2 56,16 56,44 30,58 4,44 4,16"/></svg><span>03</span></div><h4>PROTÓTIPO</h4><p>Primeira versão do sistema.</p></div>
+        <div class="step on"><div class="mk"><svg viewBox="0 0 60 60"><polygon points="30,2 56,16 56,44 30,58 4,44 4,16"/></svg><span>04</span></div><h4>DESENVOLVIMENTO</h4><p>Jogos e captura por câmera.</p></div>
+        <div class="step on now"><div class="mk"><svg viewBox="0 0 60 60"><polygon points="30,2 56,16 56,44 30,58 4,44 4,16"/></svg><span>05</span></div><h4>TESTES</h4><p>Validação com usuários.</p></div>
+        <div class="step"><div class="mk"><svg viewBox="0 0 60 60"><polygon points="30,2 56,16 56,44 30,58 4,44 4,16"/></svg><span>06</span></div><h4>EVOLUÇÃO</h4><p>Próximas versões.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="futuro">
+  <div class="wrap">
+    <div class="fut-head reveal">
+      <div><div class="tag">PRÓXIMOS PASSOS</div><h2 style="margin-top:22px">ISSO É SÓ<br>O <span class="blue glow">COMEÇO.</span></h2></div>
+      <p class="lead">O Fisio Sense está no início, e é justamente isso que torna o projeto tão promissor. A base já existe: câmera, reconhecimento de movimento e jogos funcionando. A partir dela, há muito espaço para novas ideias.</p>
+    </div>
+    <div class="fut-grid">
+      <div class="panel fut-main reveal">
+        <div class="wall" aria-hidden="true">
+          <svg viewBox="0 0 400 260">
+            <defs><mask id="hole"><rect width="400" height="260" fill="#fff"/>
+              <g id="poseHole" fill="#000" stroke="#000" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"></g></mask></defs>
+            <g class="wallmove" id="wallmove"><rect x="40" y="20" width="320" height="230" fill="rgba(0,59,122,.35)" stroke="#008CFF" stroke-width="2" mask="url(#hole)"/>
+            <g stroke="rgba(0,168,255,.25)" mask="url(#hole)"><path d="M40 77 H360 M40 134 H360 M40 191 H360 M120 20 V250 M200 20 V250 M280 20 V250"/></g></g>
+          </svg>
+          <span class="hud wl">COPIE A POSE<b class="blue" id="poseName">BRAÇOS ABERTOS</b></span>
+        </div>
+        <div class="fut-txt">
+          <h3>Novos jogos</h3>
+          <p>Como o jogo da parede: uma parede com o formato de uma pose vem na sua direção, e você precisa copiar a posição com o corpo para passar por ela. Além dele, novas modalidades para trabalhar equilíbrio, alcance, coordenação e outros movimentos.</p>
+        </div>
+      </div>
+      <div class="panel fut-item reveal"><span class="fn">02</span><h3>Comercialização</h3><p>Levar o Fisio Sense para clínicas, consultórios, escolas e academias, como uma ferramenta pronta para usar no dia a dia.</p></div>
+      <div class="panel fut-item reveal"><span class="fn">03</span><h3>Parcerias</h3><p>Fechar parcerias com fisioterapeutas, instituições e empresas para testar, melhorar e expandir o projeto.</p></div>
+      <div class="panel fut-item reveal"><span class="fn">04</span><h3>Estudos</h3><p>Fazer estudos com profissionais e usuários para entender onde a ideia é mais útil e extrair o máximo dela.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap faq-wrap">
+    <div class="reveal"><div class="tag">PERGUNTAS</div><h2 style="margin-top:22px">DÚVIDAS<br><span class="blue">COMUNS.</span></h2></div>
+    <div class="faq reveal">
+      <details><summary>Preciso de algum equipamento especial?</summary><p>Não. Os jogos usam a câmera do computador para reconhecer o movimento. Nada fica preso no corpo.</p></details>
+      <details><summary>O FisioSense substitui o fisioterapeuta?</summary><p>Não. A proposta é ser uma ferramenta de apoio, que deixa os exercícios mais envolventes e ajuda a acompanhar a evolução, sempre com orientação profissional.</p></details>
+      <details><summary>A câmera grava a pessoa?</summary><p>A câmera é usada para reconhecer o movimento enquanto o jogo está aberto. Este site não usa a câmera.</p></details>
+      <details><summary>Quais jogos já existem?</summary><p>O FBF · FisioBoxFight, de boxe e reflexo, e o CanoeingSense, de canoagem. Outros, como o jogo de copiar a pose da parede, estão nos próximos passos.</p></details>
+      <details><summary>Quem é o Alexsolot?</summary><p>O mascote do FisioSense. Um axolote, escolhido pela capacidade de regeneração. Ele nada pelo site, e dá pra clicar nele.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta">
+  <svg class="hex-deco cta-hex" viewBox="0 0 200 200" aria-hidden="true"><polygon points="100,4 186,52 186,148 100,196 14,148 14,52" stroke-width=".4"/><polygon points="100,20 172,61 172,139 100,180 28,139 28,61" stroke-width=".3" stroke-dasharray="40 20"/></svg>
+  <div class="cta-inner">
+    <div class="final-axo" id="finalAxo">
+      <img id="finalAxoImg" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-axo alt="Axolote oficial Fisio Sense">
+    </div>
+    <h2>EVOLUIR É<br><span class="blue glow">CONTINUAR.</span></h2>
+    <div class="sign">FISIO SENSE<span>MOVA. JOGUE. EVOLUA.</span></div>
+    <a class="btn solid" href="#problema">CONHEÇA O PROJETO</a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="foot hud">
+    <span>© 2026 FISIO SENSE</span>
+    <span class="blue">MOVA. JOGUE. EVOLUA.</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+
+<script src="js/jogos.js"></script>
+<script src="js/pose.js"></script>
+<script src="js/alexsolot.js"></script>
+
+<script src="js/pet.js"></script>
+</body>
+</html>
