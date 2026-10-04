@@ -555,3 +555,51 @@ body{-webkit-tap-highlight-color:transparent}
 .faq details[open] summary::after{transform:rotate(45deg)}
 .faq details p{color:#c9cdd4;margin-top:10px;font-size:15px;max-width:60ch}
 @media (max-width:1024px){.pub-head,.faq-wrap{grid-template-columns:1fr;gap:30px}.pub-grid,.team{grid-template-columns:1fr}.ficha{grid-template-columns:repeat(2,1fr)}}
+
+.team{grid-template-columns:repeat(4,1fr)}
+.ini-img{width:84px;height:64px;object-fit:contain;margin-bottom:18px;filter:drop-shadow(0 0 10px rgba(0,140,255,.55))}
+.mem-alex{border-color:var(--b2)}
+@media (max-width:1200px) and (min-width:1025px){.team{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:1024px){.team{grid-template-columns:1fr}}
+
+/* detalhes dos jogos + relatórios */
+.det-head{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end;margin-bottom:70px}
+.det-game{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-bottom:90px}
+.det-game.rev .det-info{order:2}
+.det-name{font-family:var(--fd);font-size:clamp(22px,2.4vw,32px);color:var(--w);margin-bottom:16px}
+.det-name span{display:block;font-family:var(--fh);font-size:12px;letter-spacing:.3em;color:var(--b3);margin-bottom:6px}
+.det-desc{color:#c9cdd4;font-size:15.5px;max-width:58ch}
+.det-info h4,.rp-why h4{font-family:var(--fh);font-weight:700;font-size:13px;letter-spacing:.24em;color:var(--b2);text-transform:uppercase;margin:26px 0 12px}
+.steps{list-style:none;counter-reset:st;display:grid;gap:12px}
+.steps li{counter-increment:st;position:relative;padding-left:44px;color:#c9cdd4;font-size:15px;max-width:56ch}
+.steps li::before{content:counter(st,decimal-leading-zero);position:absolute;left:0;top:-1px;font-family:var(--fd);font-size:14px;color:var(--b3)}
+.report{padding:26px 26px 22px}
+.rp-top{display:flex;justify-content:space-between;gap:16px;border-bottom:1px solid var(--bd);padding-bottom:14px;margin-bottom:18px}
+.rp-top .hud b{font-size:15px}
+.rp-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:20px}
+.rp-stats .hud b{font-size:clamp(16px,1.8vw,22px)}
+.rp-k{font-family:var(--fh);font-size:11px;letter-spacing:.24em;color:var(--g);margin:16px 0 10px}
+.rp-bars{display:grid;gap:9px}
+.rb{display:grid;grid-template-columns:96px 1fr 44px;align-items:center;gap:10px;font-family:var(--fh);font-size:12px;letter-spacing:.12em;color:#c9cdd4}
+.rb i{height:8px;background:var(--bd);position:relative;overflow:hidden}
+.rb i::after{content:"";position:absolute;inset:0;width:0;background:var(--b2);box-shadow:0 0 10px var(--b2);transition:width 1.6s .3s cubic-bezier(.6,.1,.3,1)}
+.in .rb i::after{width:var(--w)}
+.rb em{font-style:normal;text-align:right;color:var(--w)}
+.rp-split{display:flex;height:26px;font-family:var(--fh);font-size:11px;letter-spacing:.14em;gap:3px}
+.rp-split i{display:flex;align-items:center;padding:0 10px;font-style:normal;width:var(--w);white-space:nowrap}
+.rp-split .l{background:rgba(255,59,59,.25);border-left:3px solid #FF3B3B}
+.rp-split .l2{background:rgba(0,168,255,.18);border-left:3px solid var(--b3)}
+.rp-split .r{background:rgba(0,123,255,.3);border-right:3px solid var(--b2);justify-content:flex-end}
+.rp-line{width:100%;height:70px;display:block}
+.rp-note{display:flex;align-items:center;gap:12px;margin-top:20px;padding-top:16px;border-top:1px solid var(--bd);font-family:var(--fh);font-size:14px;color:#fff}
+.rp-note img{width:58px;flex:none;filter:drop-shadow(0 0 8px rgba(0,140,255,.5))}
+.rp-why{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;border-top:1px solid var(--bd);padding-top:10px}
+.rp-why p{color:#c9cdd4;font-size:15px}
+@media (max-width:1024px){.det-head,.det-game{grid-template-columns:1fr;gap:30px}.det-game.rev .det-info{order:0}.rp-why{grid-template-columns:1fr;gap:6px}}
+@media (max-width:520px){.rp-stats{grid-template-columns:repeat(2,1fr)}.rb{grid-template-columns:80px 1fr 40px;font-size:11px}.report{padding:20px 16px}}
+
+.cta-btns{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+.ig-link{color:var(--w);border-bottom:1px solid var(--bd);transition:color .25s,border-color .25s}
+.ig-link:hover{color:var(--b3);border-color:var(--b3)}
+.nav-ig{color:var(--b2)!important}
+@media (min-width:1025px) and (max-width:1200px){.links{gap:22px}}
