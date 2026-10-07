@@ -603,3 +603,26 @@ body{-webkit-tap-highlight-color:transparent}
 .ig-link:hover{color:var(--b3);border-color:var(--b3)}
 .nav-ig{color:var(--b2)!important}
 @media (min-width:1025px) and (max-width:1200px){.links{gap:22px}}
+
+/* ---------- CORREÇÃO: fontes largas no celular não podem empurrar o layout ---------- */
+.hero-grid>*,.wrap>*,.ev-main>*,.dash>*,.det-game>*,.pet-grid>*,.track-grid>*,.why>*{min-width:0}
+@media (max-width:820px){
+  .hero-grid,.track-grid,.prob-head,.game-head,.dash,.ev,.ev-main,.why,.pet-grid,#pet .pet-head,.pub-head,.det-head,.det-game,.faq-wrap,.fut-head{grid-template-columns:minmax(0,1fr)!important}
+  .hero-copy h1{font-size:clamp(34px,12vw,62px);letter-spacing:0}
+  .ctas{display:grid;grid-template-columns:minmax(0,1fr);gap:12px;width:100%}
+  .ctas .btn{width:100%;justify-content:center;flex:none}
+  h2{font-size:clamp(24px,8.4vw,44px)}
+  #frase h2{font-size:clamp(26px,8.6vw,48px)}
+  #game h2{font-size:clamp(30px,10vw,56px)}
+  #cta h2{font-size:clamp(28px,8.8vw,52px)}
+  .dash-top{flex-wrap:wrap;gap:12px}
+  .dash-top .hud{text-align:left!important}
+  .dash-top .hud b{font-size:13px!important}
+  .rp-top{flex-wrap:wrap}
+  .rp-top .hud{text-align:left!important}
+  .ev-big{font-size:clamp(48px,16vw,72px)}
+  .cta-btns{flex-direction:column;align-items:stretch;width:100%;max-width:360px}
+  .cta-btns .btn{justify-content:center}
+  .det-name{font-size:clamp(20px,6.4vw,28px)}
+  .fiap-txt b{font-size:clamp(36px,12vw,60px)}
+}
